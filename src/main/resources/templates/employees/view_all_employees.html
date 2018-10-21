@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template"/>
+      <meta name="author" content="GeeksLabs"/>
+      <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal"/>
+      <link rel="shortcut icon" href="../static/img/favicon.png"  th:src="@{img/favicon.png}"/>
+
+
+
+      <title> View All Employees | Creative - PT eBDesk</title>
+
+      <!-- Bootstrap CSS -->
+      <link href="../static/css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}" rel="stylesheet">
+      <!-- bootstrap theme -->
+      <link href="../static/css/bootstrap-theme.css" th:href="@{../css/bootstrap-theme.css}" rel="stylesheet">
+      <!--external css-->
+      <!-- font icon -->
+      <link href="../static/css/elegant-icons-style.css" th:href="@{../css/elegant-icons-style.css}" rel="stylesheet" />
+      <link href="../static/css/font-awesome.min.css"  th:href="@{../css/font-awesome.min.css}" rel="stylesheet" />
+      <!-- Custom styles -->
+      <link href="../static/css/style.css" th:href="@{../css/style.css}" rel="stylesheet">
+      <link href="../static/css/style-responsive.css" th:href="@{../css/style-responsive.css}" rel="stylesheet" />
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+      <!--[if lt IE 9]-->
+      <!--<script src="../static/js/html5shiv.js" th:src="@{js/html5shiv.js}"></script>-->
+      <!--<script src="../static/js/respond.min.js" th:src="@{js/respond.min.js}"></script>-->
+      <!--<script src="../static/js/lte-ie7.js" th:src="@{js/lte-ie7.js}"></script>-->
+      <!--[endif]-->
+      <style>
+          .pencet:hover{cursor: pointer;cursor:hand;color: #00a6b2}
+      </style>
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+          <a href="#" class="logo">Welcome to <span class="lite">PT eBDesk Administrator</span></a>
+          <!--logo end-->
+
+          <!--<div class="nav search-row" id="top_menu">-->
+          <!--&lt;!&ndash;  search form start &ndash;&gt;-->
+          <!--<ul class="nav top-menu">                    -->
+          <!--<li>-->
+          <!--<form class="navbar-form">-->
+          <!--<input class="form-control" placeholder="Search" type="text"/>-->
+          <!--</form>-->
+          <!--</li>                    -->
+          <!--</ul>-->
+          <!--&lt;!&ndash;  search form end &ndash;&gt;                -->
+          <!--</div>-->
+
+            <div class="top-nav notification-row">
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+
+                    <!--&lt;!&ndash; task notificatoin start &ndash;&gt;-->
+                    <!--<li id="task_notificatoin_bar" class="dropdown">-->
+                        <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+                            <!--<i class="icon-task-l"></i>-->
+                            <!--<span class="badge bg-important">5</span>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu extended tasks-bar">-->
+                            <!--<div class="notify-arrow notify-arrow-blue"></div>-->
+                            <!--<li>-->
+                                <!--<p class="blue">You have 5 pending tasks</p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<div class="task-info">-->
+                                        <!--<div class="desc">Design PSD </div>-->
+                                        <!--<div class="percent">90%</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="progress progress-striped">-->
+                                        <!--<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">-->
+                                            <!--<span class="sr-only">90% Complete (success)</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<div class="task-info">-->
+                                        <!--<div class="desc">-->
+                                            <!--Project 1-->
+                                        <!--</div>-->
+                                        <!--<div class="percent">30%</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="progress progress-striped">-->
+                                        <!--<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">-->
+                                            <!--<span class="sr-only">30% Complete (warning)</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<div class="task-info">-->
+                                        <!--<div class="desc">Digital Marketing</div>-->
+                                        <!--<div class="percent">80%</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="progress progress-striped">-->
+                                        <!--<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">-->
+                                            <!--<span class="sr-only">80% Complete</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<div class="task-info">-->
+                                        <!--<div class="desc">Logo Designing</div>-->
+                                        <!--<div class="percent">78%</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="progress progress-striped">-->
+                                        <!--<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%">-->
+                                            <!--<span class="sr-only">78% Complete (danger)</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<div class="task-info">-->
+                                        <!--<div class="desc">Mobile App</div>-->
+                                        <!--<div class="percent">50%</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="progress progress-striped active">-->
+                                        <!--<div class="progress-bar"  role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">-->
+                                            <!--<span class="sr-only">50% Complete</span>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class="external">-->
+                                <!--<a href="#">See All Tasks</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--&lt;!&ndash; task notificatoin end &ndash;&gt;-->
+                    <!--&lt;!&ndash; inbox notificatoin start&ndash;&gt;-->
+                    <!--<li id="mail_notificatoin_bar" class="dropdown">-->
+                        <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+                            <!--<i class="icon-envelope-l"></i>-->
+                            <!--<span class="badge bg-important">5</span>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu extended inbox">-->
+                            <!--<div class="notify-arrow notify-arrow-blue"></div>-->
+                            <!--<li>-->
+                                <!--<p class="blue">You have 5 new messages</p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>-->
+                                    <!--<span class="subject">-->
+                                    <!--<span class="from">Greg  Martin</span>-->
+                                    <!--<span class="time">1 min</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">-->
+                                        <!--I really like this admin panel.-->
+                                    <!--</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>-->
+                                    <!--<span class="subject">-->
+                                    <!--<span class="from">Bob   Mckenzie</span>-->
+                                    <!--<span class="time">5 mins</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">-->
+                                     <!--Hi, What is next project plan?-->
+                                    <!--</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>-->
+                                    <!--<span class="subject">-->
+                                    <!--<span class="from">Phillip   Park</span>-->
+                                    <!--<span class="time">2 hrs</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">-->
+                                        <!--I am like to buy this Admin Template.-->
+                                    <!--</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>-->
+                                    <!--<span class="subject">-->
+                                    <!--<span class="from">Ray   Munoz</span>-->
+                                    <!--<span class="time">1 day</span>-->
+                                    <!--</span>-->
+                                    <!--<span class="message">-->
+                                        <!--Icon fonts are great.-->
+                                    <!--</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">See all messages</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--&lt;!&ndash; inbox notificatoin end &ndash;&gt;-->
+                    <!--&lt;!&ndash; alert notification start&ndash;&gt;-->
+                    <!--<li id="alert_notificatoin_bar" class="dropdown">-->
+                        <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+
+                            <!--<i class="icon-bell-l"></i>-->
+                            <!--<span class="badge bg-important">7</span>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu extended notification">-->
+                            <!--<div class="notify-arrow notify-arrow-blue"></div>-->
+                            <!--<li>-->
+                                <!--<p class="blue">You have 4 new notifications</p>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="label label-primary"><i class="icon_profile"></i></span> -->
+                                    <!--Friend Request-->
+                                    <!--<span class="small italic pull-right">5 mins</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="label label-warning"><i class="icon_pin"></i></span>  -->
+                                    <!--John location.-->
+                                    <!--<span class="small italic pull-right">50 mins</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="label label-danger"><i class="icon_book_alt"></i></span> -->
+                                    <!--Project 3 Completed.-->
+                                    <!--<span class="small italic pull-right">1 hr</span>-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#">-->
+                                    <!--<span class="label label-success"><i class="icon_like"></i></span> -->
+                                    <!--Mick appreciated your work.-->
+                                    <!--<span class="small italic pull-right"> Today</span>-->
+                                <!--</a>-->
+                            <!--</li>                            -->
+                            <!--<li>-->
+                                <!--<a href="#">See all notifications</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!-- alert notification end-->
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" th:src="@{~/img/{path}(path=${user.prof_pic})}" height="30px">
+                            </span>
+                            <span class="first_name" th:text=" ${user.first_name}"></span>
+                            <span class="last_name" th:text=" ${user.last_name}"></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li class="eborder-top" onclick="liatProfile()">
+                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                            </li>
+                            <!--<li>-->
+                                <!--<a href="#"><i class="icon_mail_alt"></i> My Inbox</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#"><i class="icon_clock_alt"></i> Timeline</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#"><i class="icon_chat_alt"></i> Chats</a>-->
+                            <!--</li>-->
+                            <li onclick="bye()">
+                                <a href="#"><i class="icon_key_alt"></i> Log Out</a>
+                            </li>
+                            <!--<li>-->
+                                <!--<a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>-->
+                            <!--</li>-->
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">
+                  <li class="active">
+                      <a class="" href="/index">
+                          <i class="icon_house_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="fa fa-user"></i>
+                          <span>Employees</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/viewAllEmployees">View All Employees</a></li>
+                          <li><a class="" href="/viewAllEmployeesAssignment">View Emp. Assign.</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>Projects</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/viewAllProjects">View All Projects</a></li>
+                          <li><a class="" th:href="@{/viewMyProjects/{id}(id=${user.id})}">View Your Projects</a></li>
+                          <li><a class=""  th:if="${user.role==1 || user.role==2}" href="/addNewProject">Add New Project</a></li>
+                      </ul>
+                  </li>
+                  <li th:if="${user.role==1}" >
+                      <a href="/viewAllSkills"  class="">
+                          <i class="fa fa-suitcase"></i>
+                          <span>Skill</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+
+                  </li>
+                  <li th:if="${user.role==1}">
+                      <a href="/viewAllDivisions"  class="">
+                          <i class="fa fa-support"></i>
+                          <span>Division</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+
+                  </li>
+
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+		  <div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa-table"></i> Table</h3>
+					<ol class="breadcrumb">
+                        <li><i class="fa fa-home"></i><a href="/index">Home</a></li>
+                        <li><i class="fa fa-user"></i><a  href="/viewAllEmployees">Employees</a></li>
+					</ol>
+				</div>
+			</div>
+              <!-- page start-->
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              List All Employees
+                          </header>
+                          <div class="panel-body">
+                          <div class="form-horizontal form">
+                              <div class="form-group">
+                                  <form method="GET" th:action="@{/searchUser}">
+                                      <div class="col-sm-3">
+                                          <input id="show-post-search" name="searchname" class="form-control" placeholder="Search" type="text" value="">
+                                      </div>
+                                      <label class="control-label col-sm-1">by</label>
+                                      <div class="col-sm-2">
+                                          <select id="searchcategory" class="form-control" name="searchcategory">
+                                              <option value="fname">First Name</option>
+                                              <option value="lname">Last Name</option>
+                                              <option value="email">Email</option>
+                                              <option value="phone">Phone Number</option>
+                                              <option value="role">Role</option>
+                                              <option value="rate">Rate</option>
+                                              <option value="division">Division</option>
+                                          </select>
+                                      </div>
+                                      <div class="col-sm-3">
+                                          <button id="show-post-button-search" class='btn btn-primary'><i class='fa fa-search'></i> Search</button>
+                                      </div>
+                                  </form>
+
+                                  <!--<label class="control-label col-sm-2 ">items / page : </label>-->
+                                  <!--<div class="col-sm-1 text-right ">-->
+                                      <!--<select id="show-post-itemsShowsPerPage" class="form-control" name="itemsShowsPerPage">-->
+                                          <!--<option value="10">10</option>-->
+                                          <!--<option value="20">20</option>-->
+                                          <!--<option value="50">50</option>-->
+                                          <!--<option value="100">100</option>-->
+                                      <!--</select>-->
+                                  <!--</div>-->
+                              </div>
+                          </div>
+                          <br/>
+
+                          <div class="table-responsive">
+                          <table id="sortTable" class="table table-responsive table-bordered table-striped table-advance table-hover">
+                         <thead>
+                         <tr>
+                             <th class="col-sm-3"><i class="fa fa-user"></i> Email <a class="pull-right tooltips" data-toggle="modal tooltip" data-placement="top" data-original-title="Sort By Email" onclick="sortTable(0)"><i class="fa fa-sort"></i></a></th>
+                             <th class="col-sm-3"><i class="fa fa-bookmark-o"></i> Name <a class="pull-right tooltips" data-toggle="modal tooltip" data-placement="top" data-original-title="Sort By Name" onclick="sortTable(1)"><i class="fa fa-sort"></i></a></th>
+                             <th class="col-sm-2"><i class="icon_mobile"></i> Phone Number <a class="pull-right tooltips" data-toggle="modal tooltip" data-placement="top" data-original-title="Sort By Phone Number" onclick="sortTable(2)"><i class="fa fa-sort"></i></a></th>
+                             <th class="col-sm-1"><i class="icon_cogs" ></i> Role <a class="pull-right tooltips" data-toggle="modal tooltip" data-placement="top" data-original-title="Sort By Role" onclick="sortTable(3)"><i class="fa fa-sort"></i></a></th>
+                             <th class="col-sm-2"><i class="fa fa-star"></i> Rate <a class="pull-right tooltips" data-toggle="modal tooltip" data-placement="top" data-original-title="Sort By Rating" onclick="sortTable(4)"><i class="fa fa-sort"></i></a></th>
+                             <th class="col-sm-1"><i class="fa fa-book"></i> Division <a class="pull-right tooltips" data-toggle="modal tooltip" data-placement="top" data-original-title="Sort By Division" onclick="sortTable(5)"><i class="fa fa-sort"></i></a></th>
+                         </tr>
+                         </thead>
+
+                              <tbody id="myTable">
+                              <tr th:each="user : ${users}"class="clickable-row" th:attr="data-id=${user.id}">
+                                  <td class="pencet" th:text="${user.email}"></td>
+                                  <td th:text="${user.first_name+' '+user.last_name}"></td>
+                                  <td th:text="${user.phone}"></td>
+                                  <td th:if="${user.role==1}">Admin</td>
+                                  <td th:if="${user.role==2}">Group Leader</td>
+                                  <td th:if="${user.role==3}">Employee</td>
+                                  <td th:if="${user.totalproject>0}" id="stars" th:attr="data-rating=${user.totalstar/user.totalproject}" class="starrr"></td>
+                                  <td th:if="${user.totalproject==0}">Not Yet Rated</td>
+                                  <td th:text="${user.division.name}"></td>
+                              </tr>
+
+                           </tbody>
+                        </table>
+                          </div>
+                          <div class="form-group text-center">
+                              <ul class="pagination pagination-xs pager" id="myPager"></ul>
+                          </div>
+                          </div>
+                      </section>
+                  </div>
+              </div>
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+      <div class="text-right">
+            <div class="credits">
+                <!-- 
+                    All the links in the footer should remain intact. 
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+                -->
+                </div>
+        </div>
+  </section>
+  <!-- container section end -->
+    <!-- javascripts -->
+    <script src="../static/js/jquery.js" th:src="@{../js/jquery.js}"></script>
+    <script src="../static/js/bootstrap.min.js" th:src="@{../js/bootstrap.min.js}"></script>
+    <!-- nicescroll -->
+    <script src="../static/js/jquery.scrollTo.min.js" th:src="@{../js/jquery.scrollTo.min.js}" ></script>
+    <script src="../static/js/jquery.nicescroll.js"  th:src="@{../js/jquery.nicescroll.js}" type="text/javascript"></script>
+    <!--custome script for all page-->
+    <script src="../static/js/scripts.js" th:src="@{../js/scripts.js}"></script>
+
+
+  <script>
+      jQuery(document).ready(function($) {
+          $(".clickable-row").click(function() {
+//
+//        console.log($(this).data("id"));
+              window.location = "/viewEmployee/" + $(this).data("id");
+          });
+      });
+  </script>
+
+  <script th:inline="javascript">
+      var message1 = [[${user.first_name}]];
+      function welcome() {
+          alert("Welcome "+message1+" !");
+      }
+
+      function bye() {
+          var r = confirm("Anda yakin ingin logout ? ");
+          if (r == true) {
+              alert("Good Bye");
+              document.location.href = "/login";
+          }
+          else {
+              location.reload();
+          }
+      }
+
+      //star
+
+      var __slice = [].slice;
+
+      (function($, window) {
+          var Starrr;
+
+          Starrr = (function() {
+              Starrr.prototype.defaults = {
+                  rating: void 0,
+                  numStars: 5,
+                  change: function(e, value) {}
+              };
+
+              function Starrr($el, options) {
+                  var i, _, _ref,
+                      _this = this;
+
+                  this.options = $.extend({}, this.defaults, options);
+                  this.$el = $el;
+                  _ref = this.defaults;
+                  for (i in _ref) {
+                      _ = _ref[i];
+                      if (this.$el.data(i) != null) {
+                          this.options[i] = this.$el.data(i);
+                      }
+                  }
+                  this.createStars();
+                  this.syncRating();
+//                  this.$el.on('mouseover.starrr', 'span', function(e) {
+//                      return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
+//                  });
+//                  this.$el.on('mouseout.starrr', function() {
+//                      return _this.syncRating();
+//                  });
+//                  this.$el.on('click.starrr', 'span', function(e) {
+//                      return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
+//                  });
+//                  this.$el.on('starrr:change', this.options.change);
+              }
+
+              Starrr.prototype.createStars = function() {
+                  var _i, _ref, _results;
+
+                  _results = [];
+                  for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+                      _results.push(this.$el.append("<span class='fa .fa-star-o'></span>"));
+                  }
+                  return _results;
+              };
+
+              Starrr.prototype.setRating = function(rating) {
+                  if (this.options.rating === rating) {
+                      rating = void 0;
+                  }
+                  this.options.rating = rating;
+                  this.syncRating();
+                  return this.$el.trigger('starrr:change', rating);
+              };
+
+              Starrr.prototype.syncRating = function(rating) {
+                  var i, _i, _j, _ref;
+
+                  rating || (rating = this.options.rating);
+                  if (rating) {
+                      for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+                          this.$el.find('span').eq(i).removeClass('fa-star-o').addClass('fa-star');
+                      }
+                  }
+                  if (rating && rating < 5) {
+                      for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+                          this.$el.find('span').eq(i).removeClass('fa-star').addClass('fa-star-o');
+                      }
+                  }
+                  if (!rating) {
+                      return this.$el.find('span').removeClass('fa-star').addClass('fa-star-o');
+                  }
+              };
+
+              return Starrr;
+
+          })();
+          return $.fn.extend({
+              starrr: function() {
+                  var args, option;
+
+                  option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+                  return this.each(function() {
+                      var data;
+
+                      data = $(this).data('star-rating');
+                      if (!data) {
+                          $(this).data('star-rating', (data = new Starrr($(this), option)));
+                      }
+                      if (typeof option === 'string') {
+                          return data[option].apply(data, args);
+                      }
+                  });
+              }
+          });
+      })(window.jQuery, window);
+
+      $(function() {
+          return $(".starrr").starrr();
+      });
+
+  </script>
+
+
+  <script th:inline="javascript">
+
+
+      $.fn.pageMe = function(opts){
+          var $this = this,
+              defaults = {
+                  perPage: 10 ,
+                  showPrevNext: true,
+                  hidePageNumbers: true
+              },
+              settings = $.extend(defaults, opts);
+
+          var listElement = $this;
+          var perPage = settings.perPage;
+          var children = listElement.children();
+
+          var pager = $('.pager');
+
+          if (typeof settings.childSelector!="undefined") {
+              children = listElement.find(settings.childSelector);
+          }
+
+          if (typeof settings.pagerSelector!="undefined") {
+              pager = $(settings.pagerSelector);
+          }
+
+          var numItems = children.size();
+          var numPages = Math.ceil(numItems/perPage);
+
+
+          pager.data("curr",0);
+
+          if (settings.showPrevNext){
+              $('<li><a href="#" class="prev_link">«</a></li>').appendTo(pager);
+          }
+
+          var curr = 0;
+          while(numPages > curr && (settings.hidePageNumbers==false)){
+              $('<li><a href="#" class="page_link">'+(curr+1)+'</a></li>').appendTo(pager);
+              curr++;
+          }
+
+          if (settings.showPrevNext){
+              $('<li><a href="#" class="next_link">»</a></li>').appendTo(pager);
+          }
+
+          pager.find('.page_link:first').addClass('active');
+          pager.find('.prev_link').hide();
+          if (numPages<=1) {
+              pager.find('.next_link').hide();
+          }
+          pager.children().eq(0).addClass("active");
+
+          children.hide();
+          children.slice(0, perPage).show();
+
+          pager.find('li .page_link').click(function(){
+              var clickedPage = $(this).html().valueOf()-1;
+              goTo(clickedPage,perPage);
+              return false;
+          });
+          pager.find('li .prev_link').click(function(){
+              previous();
+              return false;
+          });
+          pager.find('li .next_link').click(function(){
+              next();
+              return false;
+          });
+
+          function previous(){
+              var goToPage = parseInt(pager.data("curr")) - 1;
+              goTo(goToPage);
+          }
+
+          function next(){
+              goToPage = parseInt(pager.data("curr")) + 1;
+              goTo(goToPage);
+          }
+
+          function goTo(page){
+              var startAt = page * perPage,
+                  endOn = startAt + perPage;
+
+              children.css('display','none').slice(startAt, endOn).show();
+
+              if (page>=1) {
+                  pager.find('.prev_link').show();
+              }
+              else {
+                  pager.find('.prev_link').hide();
+              }
+
+              if (page<(numPages-1)) {
+                  pager.find('.next_link').show();
+              }
+              else {
+                  pager.find('.next_link').hide();
+              }
+
+              pager.data("curr",page);
+              pager.children().removeClass("active");
+              pager.children().eq(page).addClass("active");
+
+          }
+      };
+
+      $(document).ready(function(){
+          $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:false,hidePageNumbers:false});
+
+      });
+
+  </script>
+
+  <script th:inline="javascript">
+      function sortTable(n) {
+          var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+          table = document.getElementById("sortTable");
+          switching = true;
+          //Set the sorting direction to ascending:
+          dir = "asc";
+          /*Make a loop that will continue until
+           no switching has been done:*/
+          while (switching) {
+              //start by saying: no switching is done:
+              switching = false;
+              rows = table.getElementsByTagName("TR");
+              /*Loop through all table rows (except the
+               first, which contains table headers):*/
+              for (i = 1; i < (rows.length - 1); i++) {
+                  //start by saying there should be no switching:
+                  shouldSwitch = false;
+                  /*Get the two elements you want to compare,
+                   one from current row and one from the next:*/
+                  x = rows[i].getElementsByTagName("TD")[n];
+                  y = rows[i + 1].getElementsByTagName("TD")[n];
+                  /*check if the two rows should switch place,
+                   based on the direction, asc or desc:*/
+                  if (dir == "asc") {
+                      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                          //if so, mark as a switch and break the loop:
+                          shouldSwitch= true;
+                          break;
+                      }
+                  } else if (dir == "desc") {
+                      if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                          //if so, mark as a switch and break the loop:
+                          shouldSwitch= true;
+                          break;
+                      }
+                  }
+              }
+              if (shouldSwitch) {
+                  /*If a switch has been marked, make the switch
+                   and mark that a switch has been done:*/
+                  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                  switching = true;
+                  //Each time a switch is done, increase this count by 1:
+                  switchcount ++;
+              } else {
+                  /*If no switching has been done AND the direction is "asc",
+                   set the direction to "desc" and run the while loop again.*/
+                  if (switchcount == 0 && dir == "asc") {
+                      dir = "desc";
+                      switching = true;
+                  }
+              }
+          }
+      }
+      function liatProfile() {
+          var profilenya = [[${user.id}]];
+//          alert( profilenya);
+          window.location = "/viewEmployee/" +profilenya;
+      }
+  </script>
+  </body>
+</html>

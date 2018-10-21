@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns:th= "http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template"/>
+    <meta name="author" content="GeeksLabs"/>
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal"/>
+    <link rel="shortcut icon" href="../static/img/favicon.png"  th:src="@{../img/favicon.png}"/>
+
+
+
+    <title>Login Page |  Creative - PT eBDesk </title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="../../static/css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- bootstrap theme -->
+    <link href="../../static/css/bootstrap-theme.css" th:href="@{../css/bootstrap-theme.css}" rel="stylesheet"/>
+    <!--external css-->
+    <!-- font icon -->
+    <link href="../../static/css/elegant-icons-style.css" th:href="@{../css/elegant-icons-style.css}" rel="stylesheet" />
+    <link href="../../static/css/font-awesome.css" th:href="@{../css/font-awesome.css}" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="../../static/css/style.css" th:href="@{../css/style.css}" rel="stylesheet"/>
+    <link href="../../static/css/style-responsive.css" th:href="@{../css/style-responsive.css}" rel="stylesheet" />
+
+
+    <script src="../../static/js/html5shiv.js" th:src="@{../js/html5shiv.js}" ></script>
+    <script src="../../static/js/respond.min.js" th:src="@{../js/respond.min.js}"></script>
+
+</head>
+
+  <body class="login-img3-body" onload="cekPass()">
+
+    <div class="container">
+
+
+         <form class="login-form" action="/login" method="post">
+             <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+
+
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+
+              <input type="email" class="form-control" placeholder="Email" name ="email" id="loginEmail" autofocus="true"/>
+            </div>
+
+
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+
+                <input type="password" class="form-control" placeholder="Password" id ="loginPass" name="password"/>
+
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"/> Remember me
+                <span class="pull-right"> <a href="/register">Forgot Password?</a></span>
+            </label>
+
+            <button class="btn btn-primary btn-lg btn-block" id="btn_login" type="submit">Login</button>
+                 <span class="pull-center"> Not a Member? <a href="/register">Sign up</a> here</span>
+
+
+             </div>
+         </form>
+
+
+
+    <div class="text-right">
+            <div class="credits">
+                <!-- 
+                    All the links in the footer should remain intact. 
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+                -->
+                Created By PT eBDesk
+            </div>
+        </div>
+    </div>
+
+    <script src="/jquery.js" type="application/javascript"></script>
+    <script type="application/javascript"  th:inline="javascript">
+        $(document).ready(function () {
+            $('#btn_login').on("click",function (e) {
+                e.preventDefault();
+                var message = [[${msg}]];
+                if ($message!=null){
+                    alert($message);
+                }
+                var loginName, loginPass;
+                loginName = $('#loginEmail').val();
+                loginPass = $('#loginPass').val();
+
+                if($.trim(loginName) === ""){
+                    alert("Please Insert your Email");
+                }
+
+                if(!$.trim(loginPass).isEmpty()){
+                    alert("Please Insert your Password");
+                }
+//                else {
+//                    var data = {};
+//                    data["loginName"] = loginName;
+//                    data["loginPass"] = loginPass;
+//                    $.ajax({
+//                        type: "POST",
+//                        contentType: "application/json",
+//                        url: "/index",
+//                        data: JSON.stringify(data),
+//                        dataType: 'json',
+//                        timeout: 6000,
+//                        success: function (data) {
+//                            if (confirm("Product with Id " +data + " Saved")){
+//                                window.location.reload();
+//                            }
+//                        }
+//                    });
+//                }
+            });
+        });
+
+//        function cekPass() {
+//            alert(th:text=${salahPassword}});
+//            //th:text="'Hello ini tangggal , ' + ${serverTime} + '!'"
+//        }
+
+    </script>
+
+    <script th:inline="javascript">
+        var message1 = [[${salahPassword}]];
+        function cekPass() {
+            if(message1=="salah")
+            {
+                alert("Username / Password invalid");
+            }
+            else if(message1=="buat")
+            {
+                var message2 = [[${namaRe}]];
+                alert("User "+message2+" telah dibuat, silahkan login");
+            }
+        }
+
+    </script>
+
+  </body>
+</html>
